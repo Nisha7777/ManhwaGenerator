@@ -69,13 +69,20 @@ useEffect(()=> {
       </form>
 
       {/*You only want to render one webtoon title. */}
-      {matchingWebtoons.map(webtoonItem => {
+      {/* {matchingWebtoons.map(webtoonItem => {
         return <Webtoon
         title = {webtoonItem.title}
         genre = {webtoonItem.genre}
         synopsis = {webtoonItem.synopsis}
         />
-      })}
+      })} */}
+      {
+      <Webtoon
+      title = {matchingWebtoons.title}
+      genre = {matchingWebtoons.genre}
+      synopsis = {matchingWebtoons.synopsis}
+      />
+    }
 
 
 
