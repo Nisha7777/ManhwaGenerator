@@ -4,7 +4,7 @@ import {Button, Container, TextField} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import webtoons from './data';
 import Webtoon from './components/Webtoon';
-//howdy partner.
+
 const useStyles = makeStyles(theme => ({
 container: {
   alignItems: 'center',
@@ -25,9 +25,7 @@ function App() {
     e.preventDefault(); //to prevent the page from automatically refreshing.
 
     if (genre) {
-      // console.log(genre);
 
-      //I will not need the below two lines later, as I will just want to be returning one webtoon. 
       //finding the webtoons with matching genre
       const matched = webtoons.filter(webtoon => webtoon.genre.includes(genre.toLowerCase()));
 
@@ -43,15 +41,15 @@ function App() {
     }
   }
 
-  function showMatchingWebtoon(id) {
-    setMatchingWebtoons(matchingWebtoons.filter((webtoonItem, index) =>{
-      return index === id; //only returning the webtoon with the matching id.
-    }))
-  }
+  // function showMatchingWebtoon(id) {
+  //   setMatchingWebtoons(matchingWebtoons.filter((webtoonItem, index) =>{
+  //     return index === id; //only returning the webtoon with the matching id.
+  //   }))
+  // }
 
     return (
       <Container maxWidth="sm" className={classes.container}>
-      <h1>Weeb Generator</h1>
+      <h1>Manhwa Generator</h1>
       <form className={classes.root} onSubmit={handleSubmit} noValidate autoComplete="off">
         <TextField id="outlined-basic" label="Genre" variant="outlined" onChange={(e) => setGenre(e.target.value)}/>
         <Button type="submit" variant="contained" color="secondary">

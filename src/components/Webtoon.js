@@ -9,14 +9,4 @@ return(
     </div>
 );}
 
-// function Webtoon(props) {
-//     return (
-//       <div>
-//         <h2>{props.title}</h2>
-//         <p>{props.genre}</p>
-//         <p>{props.synopsis}</p>
-//       </div>
-//     );
-//   }
-
 export default Webtoon;

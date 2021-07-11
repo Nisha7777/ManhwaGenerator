@@ -9,7 +9,7 @@ const webtoons = [
         id: 2,
         title: "Your Throne",
         genre: ["fantasy", "isekai", "romance", "revenge"],
-        synopsis: "Medea queen switches bodies with Callista queen. Together and with the help of loyal friends they plot to take down the scumbag Crown Prince Eros. Everybody has parent issues. How are these kids still somewhat ok."
+        synopsis: "Queen Medea switches bodies with Queen Callista. Together and with the help of loyal friends they plot to take down the scumbag Crown Prince Eros. Everybody has parent issues. How are these kids still somewhat ok."
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ const webtoons = [
         id: 4,
         title: "Makeup Remover",
         genre: ["romance", "comedy", "wholesome"],
-        synopsis: "Besties (or are they 👀) Yuseong and Yeseul work together to deconstruct and tackle toxic societal norms and beauty standards in the industry and in general. We love legends. Fun makeup looks and stellar character development. Probably the only webtoon I have seen that manages to do social commentary so damn well while having an excellent plot and making you invested in the characters. Although it can get pretty real sometimes, it's just a good time overall. A great destressing webtoon."
+        synopsis: "Besties (or are they 👀) Yuseong and Yeseul work together to deconstruct and tackle toxic societal norms and beauty standards in the industry and in general. We love legends. Fun makeup looks and stellar character development. Probably the only webtoon I have seen that manages to do social commentary so damn well while having an excellent plot and making you invested in the characters. Although it can get pretty real sometimes, it's just a good time overall. A great de-stressing webtoon."
     }
 ];
 
