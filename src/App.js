@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import {Button, Container, TextField} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
@@ -33,13 +33,18 @@ function App() {
       if (matched.length >= 0) {
         const randomWebtoonIndex = Math.floor(Math.random()*matched.length);
 
-        setMatchingWebtoons([...matchingWebtoons,matched[randomWebtoonIndex]]);
-        console.log(matchingWebtoons);
-      } else {
-        console.log("Oopsie no matching webtoons for that genre. :/")
-      }
+        setMatchingWebtoons(matched[randomWebtoonIndex]);
+        // console.log("Before useEffect:", matchingWebtoons);
+      // } else {
+      //   console.log("Oopsie no matching webtoons for that genre. :/")
+      // }
     }
   }
+}
+
+useEffect(()=> {
+  console.log(matchingWebtoons)
+}, [matchingWebtoons]);
 
   // function showMatchingWebtoon(id) {
   //   setMatchingWebtoons(matchingWebtoons.filter((webtoonItem, index) =>{
@@ -47,7 +52,13 @@ function App() {
   //   }))
   // }
 
+  // console.log("After", matchingWebtoons);
+
+  // const matched = webtoons.filter(webtoon => webtoon.genre.includes("wholesome"));
+
+
     return (
+
       <Container maxWidth="sm" className={classes.container}>
       <h1>Manhwa Generator</h1>
       <form className={classes.root} onSubmit={handleSubmit} noValidate autoComplete="off">
@@ -56,16 +67,15 @@ function App() {
         Generate
       </Button>
       </form>
-      <br></br>
 
-      {/* You don't need below function but it's handy to practice anyway. You only want to render one webtoon title. So you probably won't need map. You should create a random function first. */}
-      {/* {matchingWebtoons.map((webtoonItem) => {
+      {/*You only want to render one webtoon title. */}
+      {matchingWebtoons.map(webtoonItem => {
         return <Webtoon
         title = {webtoonItem.title}
         genre = {webtoonItem.genre}
         synopsis = {webtoonItem.synopsis}
         />
-      })} */}
+      })}
 
 
 
